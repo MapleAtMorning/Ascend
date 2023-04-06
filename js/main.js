@@ -522,7 +522,8 @@ document.addEventListener('visibilitychange', function (event) {
 });
 
 window.addEventListener("keydown", (event) => {
-  keysPressed[event.key] = event.key;
+  console.log(keysPressed)
+  keysPressed[event.key.toLowerCase()] = event.key.toLowerCase();
   if(event.key === "o"){
     zoom = !zoom
   }else if(event.key === "F1"){
@@ -531,5 +532,5 @@ window.addEventListener("keydown", (event) => {
 });
 
 document.addEventListener('keyup', (event) => {
-  delete keysPressed[event.key];
+  delete keysPressed[event.key.toLowerCase()];
 });
