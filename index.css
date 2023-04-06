@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(28, 29, 43);
+  color: white;
+  text-align: center;
+  font-family: 'Space Mono', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+canvas{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  width: clamp(240px, 90vw, 1220px);
+  outline: 1px white solid;
+}
+
+#win{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  width: clamp(240px, 90vw, 1220px);
+}
+#worth{
+  opacity: 0;
+}
