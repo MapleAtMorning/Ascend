@@ -68,7 +68,6 @@ function oopsjump(x,y){
 
 Composite.add(engine.world, [
 
-  Player,
   Bodies.rectangle(105, 470, 100, 75, { isStatic: true }),
   
     // First 2 jumps 
@@ -186,7 +185,9 @@ Composite.add(engine.world, [
   Bodies.rectangle(700, -4000, 500, 50, { isStatic: true, isSensor: true, label: "finish" }),
 
     // Floor
-  Bodies.rectangle(503, 528, 1200, 60, { isStatic: true }) 
+  Bodies.rectangle(503, 528, 1200, 60, { isStatic: true }),
+  
+  Player
 
 ]);
 Render.run(render);
@@ -213,7 +214,7 @@ Composite.allBodies(engine.world).forEach(e => {
     color = "#ffffff"
     bloom = 35
   }else{
-    color = "#1c1d29"
+    color = "#2f3142"
     bloom = 50
   }
   e.bloom = bloom
